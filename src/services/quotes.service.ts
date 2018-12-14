@@ -13,4 +13,12 @@ export class QuoteService {
         this.favoriteQuotes.push(quote);
         console.log(this.favoriteQuotes);
     }
+
+    removeFromFavorite(quote : IQuote){
+        const position = this.favoriteQuotes.findIndex((el : IQuote)=>{
+            return el.id === quote.id;
+        })
+        this.favoriteQuotes.splice(position, 1);
+    }
+
 }

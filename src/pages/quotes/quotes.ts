@@ -50,7 +50,7 @@ export class QuotesPage implements OnInit {
   }
 
   ionViewWillLeave() {
-    this.navCtrl.push(LibraryPage);
+    // this.navCtrl.push(LibraryPage);
   }
 
 }
