@@ -1,5 +1,7 @@
 {
   "name": "sg-quotes-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

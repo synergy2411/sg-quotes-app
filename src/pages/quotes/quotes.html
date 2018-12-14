@@ -21,8 +21,13 @@
 
       <ion-grid>
         <ion-row>
-          <ion-col col-8></ion-col>
-          <ion-col col-4>
+          <ion-col *ngIf="isFavorite(quote)" col-6>
+              <button 
+              ion-button 
+              small clear
+              (click)="onUnfavorite(quote)">Unfavorite </button>
+          </ion-col>
+          <ion-col *ngIf="!isFavorite(quote)" col-6>
               <button 
               ion-button 
               small clear

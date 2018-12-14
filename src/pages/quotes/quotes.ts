@@ -16,7 +16,7 @@ export class QuotesPage implements OnInit {
   constructor(private navParams: NavParams,
     private navCtrl: NavController,
     private alertCtrl: AlertController,
-    private quoteService : QuoteService,
+    public quoteService : QuoteService,
     private toastCtrl : ToastController) { }
 
   ngOnInit() {
@@ -49,8 +49,13 @@ export class QuotesPage implements OnInit {
 
   }
 
-  ionViewWillLeave() {
-    // this.navCtrl.push(LibraryPage);
+  onUnfavorite(quote: IQuote){
+    this.quoteService.removeFromFavorite(quote);
   }
+
+  isFavorite(quote : IQuote){
+    return this.quoteService.isQuoteFavorite(quote);
+  }
+
 
 }

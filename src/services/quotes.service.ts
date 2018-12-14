@@ -11,7 +11,7 @@ export class QuoteService {
 
     addQuoteToFavorite(quote : IQuote){
         this.favoriteQuotes.push(quote);
-        console.log(this.favoriteQuotes);
+         this.isQuoteFavorite(quote);
     }
 
     removeFromFavorite(quote : IQuote){
@@ -21,4 +21,9 @@ export class QuoteService {
         this.favoriteQuotes.splice(position, 1);
     }
 
+    isQuoteFavorite(quote : IQuote){
+        return this.favoriteQuotes.find((el : IQuote)=>{
+            return el.id === quote.id
+        } )
+    }
 }
