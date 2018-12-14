@@ -10,6 +10,7 @@ import { FavoritePageModule } from '../pages/favorite/favorite.module';
 import { LibraryPageModule } from '../pages/library/library.module';
 import { QuotesPageModule } from '../pages/quotes/quotes.module';
 import { QuotePageModule } from '../pages/quote/quote.module';
+import { QuoteService } from '../services/quotes.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { QuotePageModule } from '../pages/quote/quote.module';
     MyApp
   ],
   providers: [
+    QuoteService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
