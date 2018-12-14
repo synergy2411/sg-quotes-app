@@ -10,8 +10,15 @@
 
 <ion-content padding>
 
+  <h2>Select Category</h2>
   <ion-list>
-    <button ion-item > Test </button>
+    <button ion-item  
+      *ngFor="let quotesGroup of quotesCollection" 
+        (click)="onSelectCategory(quotesGroup)"> 
+      <ion-icon [name]="quotesGroup.icon" item-left></ion-icon>
+      <h3>{{ quotesGroup.category | uppercase }} </h3>
+      <p> {{ quotesGroup.quotes.length }} Quotes</p>
+    </button>
   </ion-list>
 
 </ion-content>

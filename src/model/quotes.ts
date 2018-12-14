@@ -1,6 +1,11 @@
+import { IQuote } from './quotes.model';
 
 
-export const QUOTES_DATA = [
+export const QUOTES_DATA : {
+  category : string;
+  quotes : IQuote[];
+  icon : string;
+}[] = [
   {
     category: 'inspirational',
     quotes: [
